@@ -22,9 +22,9 @@ Ultimately, the challenges I encountered throughout this assignment underscored 
  ### Test Coverage
  
    ```bash
-   ---------- coverage: platform Windows, python 3.10.12-final-0 ----------
+   ---------- coverage: platform Windows, python 3.10----------
 
-| **Name**                                     | **Stmts** | **Miss** | **Cover** |
+|     Name                                     |   Stmts   |   Miss   |   Cover   |
 |----------------------------------------------|-----------|----------|-----------|
 | app/__init__.py                              | 0         | 0        | 100%      |
 | app/database.py                              | 16        | 3        | 81%       |
@@ -67,36 +67,27 @@ Ultimately, the challenges I encountered throughout this assignment underscored 
 
    ```
  
- ### Issues Addressed:
-   Issue #7: [UUID is not passed correctly](https://github.com/Chelsyshankiri/event_manager_homework10/issues/7)
-  
-   Issue: Instead of passing UUID that will be unique for response data.Passing a unique-id-string which is a string as its own
-   
-   Resolution: Fixed the issue by ensuring that the UUID was correctly passed in while creating response data. After testing it is confirmed that it is working fine.
- 
-   Issue #4: [SMTPServerDisconnected : Connection unexpectedly closed running email functionalities](https://github.com/Chelsyshankiri/event_manager_homework10/issues/4)
- 
-   Issue: SMTPServerDisconnected: Connection unexpectedly closed running email functionalities
- 
-   Resolution: I have added the environment varibales of username and password for this and passed the same in the workflow code to make the SMTP connection stable. Test cases have shown that after doing this the connection is stable and the test cases are passed.
- 
-   Issue #3 [In Tests, Missing fixtures for user admin and manager tokens](https://github.com/Chelsyshankiri/event_manager_homework10/issues/3)
- 
-   Issue: Missing Fixtures: user_token, admin_token, and manager_token in Tests.
- 
-   Resolution: Added the code for the missing fixtures like admin_token, user_token and manager_token that are the cause for failure in multiple test cases. After the running the test suite we have ensured that all the token dependent code is working fine.
- 
-   Issue #2 [PydanticValidationError on LoginRequest](https://github.com/Chelsyshankiri/event_manager_homework10/issues/2)
- 
-   Issue: pydantic ValidationError for LoginRequest
- 
-   Resolution: There are few validation errors that are identified and I have corrected the schema for LoginRequest to align with expected fields. Updated the input validation logic and added unit tests to cover edge cases.
- 
-   Issue #1 [UserData Fetch is failing](https://github.com/Chelsyshankiri/event_manager_homework10/issues/1)
- 
-   Issue: UserData fetch Failure
- 
-   Resolution: A few details like nickname,username and UUID are not correctly fetched and passed to add or get the data which in result makes the model formation wrong.
+### Issues Addressed:
+
+- **Issue #7**: [UUID not passed correctly](https://github.com/Darshuu25/event_manager_HW10/issues/7)  
+  **Issue**: Instead of passing a UUID that should be unique for the response data, a string-based unique ID was being used.  
+  **Resolution**: The issue was resolved by ensuring that the UUID was correctly passed when creating the response data. After testing, it has been confirmed that the solution is functioning as expected.
+
+- **Issue #4**: [SMTPServerDisconnected: Connection unexpectedly closed during email functionalities](https://github.com/Darshuu25/event_manager_HW10/issues/4)  
+  **Issue**: Encountered the `SMTPServerDisconnected` error where the connection was unexpectedly closed while running email functionalities.  
+  **Resolution**: Added environment variables for the SMTP username and password, ensuring these values were passed properly in the workflow code to stabilize the SMTP connection. Post-fix, the connection has been stable, and the test cases passed successfully.
+
+- **Issue #3**: [Missing fixtures for user admin and manager tokens in tests](https://github.com/Darshuu25/event_manager_HW10/issues/3)  
+  **Issue**: The test suite was missing fixtures for `user_token`, `admin_token`, and `manager_token`, causing failures in multiple test cases.  
+  **Resolution**: Implemented the missing fixtures for the admin, user, and manager tokens. After adding these fixtures, I ran the test suite and confirmed that all token-dependent code passed successfully.
+
+- **Issue #2**: [PydanticValidationError on LoginRequest](https://github.com/Darshuu25/event_manager_HW10/issues/2)  
+  **Issue**: A `PydanticValidationError` was being raised during the `LoginRequest` validation.  
+  **Resolution**: Identified the validation errors and corrected the schema for the `LoginRequest` to match the expected fields. I also updated the input validation logic and added unit tests to cover edge cases, ensuring proper validation moving forward.
+
+- **Issue #1**: [UserData fetch failure](https://github.com/Darshuu25/event_manager_HW10/issues/1)  
+  **Issue**: The fetching of `UserData` was failing due to missing or incorrectly passed details such as `nickname`, `username`, and `UUID`. This caused issues with the model formation.  
+  **Resolution**: The problem was resolved by correcting the fetching and passing of the necessary fields (`nickname`, `username`, and `UUID`) during the data fetching process. After fixing this, the model formation worked correctly.
 
 
 ## Assignment Objectives
