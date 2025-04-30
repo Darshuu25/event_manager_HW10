@@ -20,7 +20,7 @@ Ultimately, the challenges I encountered throughout this assignment underscored 
  ![dockerhub deployment image](![alt text](image.png))
  
  ### Test Coverage
-
+ 
    ```bash
    ---------- coverage: platform Windows, python 3.10.12-final-0 ----------
 
