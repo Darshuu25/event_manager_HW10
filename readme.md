@@ -65,7 +65,7 @@ To complete this assignment, submit the following:
   - A 2-3 paragraph reflection on what you learned from this assignment, focusing on both technical skills and collaborative processes. Reflect on the challenges you faced, the solutions you implemented, and the insights you gained. This reflection helps solidify your learning and provides valuable feedback for improving the assignment in the future.
 
 ## Grading Rubric
-
+  
 | Criteria                                                                                                                | Points |
 |-------------------------------------------------------------------------------------------------------------------------|--------|
 | Resolved 5 issues related to username validation, password validation, and profile field edge cases                      | 30     |
