@@ -2,6 +2,94 @@
 
 Welcome to the Event Manager Company! As a newly hired Software QA Analyst/Developer and a student in software engineering, you are embarking on an exciting journey to contribute to our project aimed at developing a secure, robust REST API that supports JWT token-based OAuth2 authentication. This API serves as the backbone of our user management system and will eventually expand to include features for event management and registration.
 
+## Submissions:
+ 
+### Learnings on the Assignment
+
+This assignment has provided me with valuable insights into both the technical and collaborative aspects of software development.
+
+From a technical perspective, working on this project significantly enhanced my understanding of concepts like API debugging, design, and testing. I gained hands-on experience in roles akin to that of a QA Analyst—executing the test suite, identifying failing test cases, and troubleshooting issues within the project. This process deepened my understanding of the project's architecture and its dependencies.
+
+As I worked on resolving issues, I frequently found myself researching best practices, which refined both my problem-solving and coding abilities. Linking commits to specific issues emphasized the importance of traceability and clear documentation within a codebase.
+
+Ultimately, the challenges I encountered throughout this assignment underscored the value of systematic debugging, efficient error resolution, and effective version control. It also strengthened my foundation in software development while offering a clearer understanding of how crucial collaboration is in producing high-quality software.
+
+ ### Project Image deployed to docker hub
+ [DockerHub Repository Link](https://hub.docker.com/repository/docker/darshuu25/event_manager_homework10/general)
+ 
+ ![dockerhub deployment image](![alt text](image.png))
+ 
+ ### Test Coverage
+ 
+   ```bash
+   ---------- coverage: platform Windows, python 3.10----------
+
+|     Name                                     |   Stmts   |   Miss   |   Cover   |
+|----------------------------------------------|-----------|----------|-----------|
+| app/__init__.py                              | 0         | 0        | 100%      |
+| app/database.py                              | 16        | 3        | 81%       |
+| app/dependencies.py                          | 39        | 3        | 92%       |
+| app/main.py                                  | 16        | 3        | 81%       |
+| app/models/user_model.py                     | 49        | 0        | 100%      |
+| app/routers/__init__.py                       | 0         | 0        | 100%      |
+| app/routers/user_routes.py                   | 84        | 40       | 52%       |
+| app/schemas/link_schema.py                    | 8         | 0        | 100%      |
+| app/schemas/pagination_schema.py             | 20        | 1        | 95%       |
+| app/schemas/token_schema.py                   | 7         | 0        | 100%      |
+| app/schemas/user_schemas.py                  | 67        | 1        | 99%       |
+| app/services/__init__.py                      | 0         | 0        | 100%      |
+| app/services/email_service.py                | 18        | 1        | 94%       |
+| app/services/jwt_service.py                  | 18        | 2        | 89%       |
+| app/services/user_service.py                 | 164       | 11       | 93%       |
+| app/utils/__init__.py                         | 0         | 0        | 100%      |
+| app/utils/api_description.py                 | 3         | 0        | 100%      |
+| app/utils/link_generation.py                 | 24        | 0        | 100%      |
+| app/utils/nickname_gen.py                     | 7         | 0        | 100%      |
+| app/utils/security.py                        | 21        | 0        | 100%      |
+| app/utils/smtp_connection.py                 | 27        | 0        | 100%      |
+| app/utils/template_manager.py                | 25        | 0        | 100%      |
+| settings/__init__.py                          | 0         | 0        | 100%      |
+| settings/config.py                           | 41        | 0        | 100%      |
+| tests/__init__.py                             | 0         | 0        | 100%      |
+| tests/conftest.py                            | 134       | 2        | 99%       |
+| tests/test_api/test_users_api.py             | 126       | 0        | 100%      |
+| tests/test_conftest.py                       | 51        | 0        | 100%      |
+| tests/test_dependencies.py                   | 43        | 0        | 100%      |
+| tests/test_email.py                           | 7         | 0        | 100%      |
+| tests/test_link_generation.py                | 39        | 0        | 100%      |
+| tests/test_models/test_user_model.py         | 85        | 0        | 100%      |
+| tests/test_schemas/__init__.py                | 0         | 0        | 100%      |
+| tests/test_schemas/test_user_schemas.py      | 49        | 0        | 100%      |
+| tests/test_security.py                       | 43        | 0        | 100%      |
+| tests/test_services/test_user_service.py     | 131       | 5        | 96%       |
+| TOTAL                                        | 1362      | 72       | 95%   |
+
+
+   ```
+ 
+### Issues Addressed:
+
+- **Issue #7**: [UUID not passed correctly](https://github.com/Darshuu25/event_manager_HW10/issues/7)  
+  **Issue**: Instead of passing a UUID that should be unique for the response data, a string-based unique ID was being used.  
+  **Resolution**: The issue was resolved by ensuring that the UUID was correctly passed when creating the response data. After testing, it has been confirmed that the solution is functioning as expected.
+
+- **Issue #4**: [SMTPServerDisconnected: Connection unexpectedly closed during email functionalities](https://github.com/Darshuu25/event_manager_HW10/issues/4)  
+  **Issue**: Encountered the `SMTPServerDisconnected` error where the connection was unexpectedly closed while running email functionalities.  
+  **Resolution**: Added environment variables for the SMTP username and password, ensuring these values were passed properly in the workflow code to stabilize the SMTP connection. Post-fix, the connection has been stable, and the test cases passed successfully.
+
+- **Issue #3**: [Missing fixtures for user admin and manager tokens in tests](https://github.com/Darshuu25/event_manager_HW10/issues/3)  
+  **Issue**: The test suite was missing fixtures for `user_token`, `admin_token`, and `manager_token`, causing failures in multiple test cases.  
+  **Resolution**: Implemented the missing fixtures for the admin, user, and manager tokens. After adding these fixtures, I ran the test suite and confirmed that all token-dependent code passed successfully.
+
+- **Issue #2**: [PydanticValidationError on LoginRequest](https://github.com/Darshuu25/event_manager_HW10/issues/2)  
+  **Issue**: A `PydanticValidationError` was being raised during the `LoginRequest` validation.  
+  **Resolution**: Identified the validation errors and corrected the schema for the `LoginRequest` to match the expected fields. I also updated the input validation logic and added unit tests to cover edge cases, ensuring proper validation moving forward.
+
+- **Issue #1**: [UserData fetch failure](https://github.com/Darshuu25/event_manager_HW10/issues/1)  
+  **Issue**: The fetching of `UserData` was failing due to missing or incorrectly passed details such as `nickname`, `username`, and `UUID`. This caused issues with the model formation.  
+  **Resolution**: The problem was resolved by correcting the fetching and passing of the necessary fields (`nickname`, `username`, and `UUID`) during the data fetching process. After fixing this, the model formation worked correctly.
+
+
 ## Assignment Objectives
 
 1. **Familiarize with REST API functionality and structure**: Gain hands-on experience working with a REST API, understanding its endpoints, request/response formats, and authentication mechanisms.
