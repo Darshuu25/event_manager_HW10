@@ -22,47 +22,49 @@ Ultimately, the challenges I encountered throughout this assignment underscored 
  ### Test Coverage
  
    ```bash
-   ---------- coverage: platform Windows, python 3.10----------
+ ================================ tests coverage ================================
+_______________ coverage: platform linux, python 3.10.12-final-0 _______________
 
-|     Name                                     |   Stmts   |   Miss   |   Cover   |
-|----------------------------------------------|-----------|----------|-----------|
-| app/__init__.py                              | 0         | 0        | 100%      |
-| app/database.py                              | 16        | 3        | 81%       |
-| app/dependencies.py                          | 39        | 3        | 92%       |
-| app/main.py                                  | 16        | 3        | 81%       |
-| app/models/user_model.py                     | 49        | 0        | 100%      |
-| app/routers/__init__.py                       | 0         | 0        | 100%      |
-| app/routers/user_routes.py                   | 84        | 40       | 52%       |
-| app/schemas/link_schema.py                    | 8         | 0        | 100%      |
-| app/schemas/pagination_schema.py             | 20        | 1        | 95%       |
-| app/schemas/token_schema.py                   | 7         | 0        | 100%      |
-| app/schemas/user_schemas.py                  | 67        | 1        | 99%       |
-| app/services/__init__.py                      | 0         | 0        | 100%      |
-| app/services/email_service.py                | 18        | 1        | 94%       |
-| app/services/jwt_service.py                  | 18        | 2        | 89%       |
-| app/services/user_service.py                 | 164       | 11       | 93%       |
-| app/utils/__init__.py                         | 0         | 0        | 100%      |
-| app/utils/api_description.py                 | 3         | 0        | 100%      |
-| app/utils/link_generation.py                 | 24        | 0        | 100%      |
-| app/utils/nickname_gen.py                     | 7         | 0        | 100%      |
-| app/utils/security.py                        | 21        | 0        | 100%      |
-| app/utils/smtp_connection.py                 | 27        | 0        | 100%      |
-| app/utils/template_manager.py                | 25        | 0        | 100%      |
-| settings/__init__.py                          | 0         | 0        | 100%      |
-| settings/config.py                           | 41        | 0        | 100%      |
-| tests/__init__.py                             | 0         | 0        | 100%      |
-| tests/conftest.py                            | 134       | 2        | 99%       |
-| tests/test_api/test_users_api.py             | 126       | 0        | 100%      |
-| tests/test_conftest.py                       | 51        | 0        | 100%      |
-| tests/test_dependencies.py                   | 43        | 0        | 100%      |
-| tests/test_email.py                           | 7         | 0        | 100%      |
-| tests/test_link_generation.py                | 39        | 0        | 100%      |
-| tests/test_models/test_user_model.py         | 85        | 0        | 100%      |
-| tests/test_schemas/__init__.py                | 0         | 0        | 100%      |
-| tests/test_schemas/test_user_schemas.py      | 49        | 0        | 100%      |
-| tests/test_security.py                       | 43        | 0        | 100%      |
-| tests/test_services/test_user_service.py     | 131       | 5        | 96%       |
-| TOTAL                                        | 1362      | 72       | 95%   |
+Name                                       Stmts   Miss  Cover
+--------------------------------------------------------------
+app/__init__.py                                0      0   100%
+app/database.py                               16      3    81%
+app/dependencies.py                           39      3    92%
+app/main.py                                   16      3    81%
+app/models/user_model.py                      49      0   100%
+app/routers/__init__.py                        0      0   100%
+app/routers/user_routes.py                    84     48    43%
+app/schemas/link_schema.py                     8      0   100%
+app/schemas/pagination_schema.py              20      1    95%
+app/schemas/token_schema.py                    7      0   100%
+app/schemas/user_schemas.py                   67      1    99%
+app/services/__init__.py                       0      0   100%
+app/services/email_service.py                 18      1    94%
+app/services/jwt_service.py                   18     12    33%
+app/services/user_service.py                 164     14    91%
+app/utils/__init__.py                          0      0   100%
+app/utils/api_description.py                   3      0   100%
+app/utils/link_generation.py                  24      0   100%
+app/utils/nickname_gen.py                      7      0   100%
+app/utils/security.py                         21      0   100%
+app/utils/smtp_connection.py                  27      2    93%
+app/utils/template_manager.py                 25      0   100%
+settings/__init__.py                           0      0   100%
+settings/config.py                            41      0   100%
+tests/__init__.py                              0      0   100%
+tests/conftest.py                            134     14    90%
+tests/test_api/test_users_api.py             126     77    39%
+tests/test_conftest.py                        51      0   100%
+tests/test_dependencies.py                    43      0   100%
+tests/test_email.py                            7      0   100%
+tests/test_link_generation.py                 39      0   100%
+tests/test_models/test_user_model.py          85      0   100%
+tests/test_schemas/__init__.py                 0      0   100%
+tests/test_schemas/test_user_schemas.py       49      0   100%
+tests/test_security.py                        43      0   100%
+tests/test_services/test_user_service.py     131     11    92%
+--------------------------------------------------------------
+TOTAL                                       1362    190    86%
 
 
    ```
