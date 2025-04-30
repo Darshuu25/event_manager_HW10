@@ -10,6 +10,7 @@ load_dotenv()
 SMTP_USERNAME = os.getenv("SMTP_USERNAME")
 SMTP_PASSWORD = os.getenv("SMTP_PASSWORD")
 
+
 class Settings(BaseSettings):
         
     max_login_attempts: int = Field(default=3, description="Background color of QR codes")

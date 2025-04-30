@@ -4,66 +4,67 @@ Welcome to the Event Manager Company! As a newly hired Software QA Analyst/Devel
 
 ## Submissions:
  
- ### Learnings from the Assignments
- Through this assignment, I have got the valuable details about technical and collabarative aspects about the software development. 
- 
-On the technical side, working on this project helped me strengthen my understanding of concepts like API debugging, design, and testing. I got hands-on experience acting like a QA Analyst—running the test suite, identifying failing test cases, and tracing issues within the project. This process also helped me better understand the project's dependencies and architecture.
+### Learnings on the Assignment
 
-When it came to fixing those issues, I often had to research best practices, which really sharpened both my problem-solving and coding skills. Linking commits to specific issues taught me the importance of maintaining traceability and clear documentation in a codebase.
+This assignment has provided me with valuable insights into both the technical and collaborative aspects of software development.
 
-Overall, the challenges I faced during this assignment taught me how valuable systematic debugging, effective error resolution, and proper version control are. It also gave me a stronger foundation and a clearer perspective on the importance of collaboration in software development.
- 
+From a technical perspective, working on this project significantly enhanced my understanding of concepts like API debugging, design, and testing. I gained hands-on experience in roles akin to that of a QA Analyst—executing the test suite, identifying failing test cases, and troubleshooting issues within the project. This process deepened my understanding of the project's architecture and its dependencies.
+
+As I worked on resolving issues, I frequently found myself researching best practices, which refined both my problem-solving and coding abilities. Linking commits to specific issues emphasized the importance of traceability and clear documentation within a codebase.
+
+Ultimately, the challenges I encountered throughout this assignment underscored the value of systematic debugging, efficient error resolution, and effective version control. It also strengthened my foundation in software development while offering a clearer understanding of how crucial collaboration is in producing high-quality software.
+
  ### Project Image deployed to docker hub
- [DockerHub Repository Link](https://hub.docker.com/repository/docker/chelsy688/event_manager/general)
+ [DockerHub Repository Link](https://hub.docker.com/repository/docker/darshuu25/event_manager_homework10/general)
  
- ![dockerhub deployment image](./docker_hub.png)
+ ![dockerhub deployment image](![alt text](image.png))
  
  ### Test Coverage
- 
-   Added Testcases to increase the test coverage upto 95% on the Pytest coverage run. 
-   Coverage report afer the successful workflow run.
+
    ```bash
-   ---------- coverage: platform linux, python 3.10.12-final-0 ----------
-Name                                       Stmts   Miss  Cover
---------------------------------------------------------------
-app/__init__.py                                0      0   100%
-app/database.py                               16      3    81%
-app/dependencies.py                           39      3    92%
-app/main.py                                   16      3    81%
-app/models/user_model.py                      49      0   100%
-app/routers/__init__.py                        0      0   100%
-app/routers/user_routes.py                    84     40    52%
-app/schemas/link_schema.py                     8      0   100%
-app/schemas/pagination_schema.py              20      1    95%
-app/schemas/token_schema.py                    7      0   100%
-app/schemas/user_schemas.py                   67      1    99%
-app/services/__init__.py                       0      0   100%
-app/services/email_service.py                 18      1    94%
-app/services/jwt_service.py                   18      2    89%
-app/services/user_service.py                 164     11    93%
-app/utils/__init__.py                          0      0   100%
-app/utils/api_description.py                   3      0   100%
-app/utils/link_generation.py                  24      0   100%
-app/utils/nickname_gen.py                      7      0   100%
-app/utils/security.py                         21      0   100%
-app/utils/smtp_connection.py                  27      0   100%
-app/utils/template_manager.py                 25      0   100%
-settings/__init__.py                           0      0   100%
-settings/config.py                            41      0   100%
-tests/__init__.py                              0      0   100%
-tests/conftest.py                            134      2    99%
-tests/test_api/test_users_api.py             126      0   100%
-tests/test_conftest.py                        51      0   100%
-tests/test_dependencies.py                    43      0   100%
-tests/test_email.py                            7      0   100%
-tests/test_link_generation.py                 39      0   100%
-tests/test_models/test_user_model.py          85      0   100%
-tests/test_schemas/__init__.py                 0      0   100%
-tests/test_schemas/test_user_schemas.py       49      0   100%
-tests/test_security.py                        43      0   100%
-tests/test_services/test_user_service.py     131      5    96%
---------------------------------------------------------------
-TOTAL                                       1362     72    95%
+   ---------- coverage: platform Windows, python 3.10.12-final-0 ----------
+
+| **Name**                                     | **Stmts** | **Miss** | **Cover** |
+|----------------------------------------------|-----------|----------|-----------|
+| app/__init__.py                              | 0         | 0        | 100%      |
+| app/database.py                              | 16        | 3        | 81%       |
+| app/dependencies.py                          | 39        | 3        | 92%       |
+| app/main.py                                  | 16        | 3        | 81%       |
+| app/models/user_model.py                     | 49        | 0        | 100%      |
+| app/routers/__init__.py                       | 0         | 0        | 100%      |
+| app/routers/user_routes.py                   | 84        | 40       | 52%       |
+| app/schemas/link_schema.py                    | 8         | 0        | 100%      |
+| app/schemas/pagination_schema.py             | 20        | 1        | 95%       |
+| app/schemas/token_schema.py                   | 7         | 0        | 100%      |
+| app/schemas/user_schemas.py                  | 67        | 1        | 99%       |
+| app/services/__init__.py                      | 0         | 0        | 100%      |
+| app/services/email_service.py                | 18        | 1        | 94%       |
+| app/services/jwt_service.py                  | 18        | 2        | 89%       |
+| app/services/user_service.py                 | 164       | 11       | 93%       |
+| app/utils/__init__.py                         | 0         | 0        | 100%      |
+| app/utils/api_description.py                 | 3         | 0        | 100%      |
+| app/utils/link_generation.py                 | 24        | 0        | 100%      |
+| app/utils/nickname_gen.py                     | 7         | 0        | 100%      |
+| app/utils/security.py                        | 21        | 0        | 100%      |
+| app/utils/smtp_connection.py                 | 27        | 0        | 100%      |
+| app/utils/template_manager.py                | 25        | 0        | 100%      |
+| settings/__init__.py                          | 0         | 0        | 100%      |
+| settings/config.py                           | 41        | 0        | 100%      |
+| tests/__init__.py                             | 0         | 0        | 100%      |
+| tests/conftest.py                            | 134       | 2        | 99%       |
+| tests/test_api/test_users_api.py             | 126       | 0        | 100%      |
+| tests/test_conftest.py                       | 51        | 0        | 100%      |
+| tests/test_dependencies.py                   | 43        | 0        | 100%      |
+| tests/test_email.py                           | 7         | 0        | 100%      |
+| tests/test_link_generation.py                | 39        | 0        | 100%      |
+| tests/test_models/test_user_model.py         | 85        | 0        | 100%      |
+| tests/test_schemas/__init__.py                | 0         | 0        | 100%      |
+| tests/test_schemas/test_user_schemas.py      | 49        | 0        | 100%      |
+| tests/test_security.py                       | 43        | 0        | 100%      |
+| tests/test_services/test_user_service.py     | 131       | 5        | 96%       |
+| TOTAL                                        | 1362      | 72       | 95%   |
+
+
    ```
  
  ### Issues Addressed:
